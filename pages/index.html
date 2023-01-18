@@ -7,6 +7,7 @@
     <title>Cutting Edge Ammo</title>
 
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -33,14 +34,20 @@
     <footer>
         <div class="gray"><!--Gray space--></div>
         <div class="black">
-            <a href="https://www.facebook.com/people/Cutting-Edge-Ammo/100066693577070/">Facebook logo</a>
-            <a href="https://www.instagram.com/cuttingedgeammu/?hl=en">Instagram logo</a>
-            <a href="terms.html">TERMS</a>
-            <p id="slash">/</p>
-            <a href="privacy.html">PRIVACY</a>
-            <p id="copyrightText">&#9400 Cutting Edge Ammo 'Calendar Year'</p>
+            <a href="https://www.facebook.com/people/Cutting-Edge-Ammo/100066693577070/" id="facebookLogo" title="Cutting Edge Ammo on Facebook" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/cuttingedgeammu/?hl=en" id="instagramLogo" title="Cutting Edge Ammo on Instagram" class="fa fa-instagram"></a>
+            <p id="copyrightText">&#9400 Cutting Edge Ammo</p>
+            <div id="termsPrivacyDiv">
+                <a href="terms.html">TERMS</a>
+                <p id="slash">&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+                <a href="privacy.html">PRIVACY</a>
+            </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script>
+        let currentYear = new Date().getFullYear();
+        document.getElementById("copyrightText").innerHTML = "&#9400 Cutting Edge Ammo " + currentYear;
+    </script>
+    <script src="../index.js"></script>
 </body>
 </html>

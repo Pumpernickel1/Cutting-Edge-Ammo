@@ -76,9 +76,9 @@ header {
     background-color: black;
     width: 100vw;
     height: 20vh;
-    display: flex;
-    flex: wrap;
-    flex-direction: column;
+    // display: flex;
+    // flex: wrap;
+    // flex-direction: column;
 }
 
 h1 {
@@ -129,11 +129,11 @@ nav {
     background-color: rgb(242, 242, 242);
     width: 100vw;
     height: 9vh;
-    padding-top: 5.7vh;
+    padding-top: 4vh;
 }
 
 .pageContent {
-    height: 60vh;
+    height: 10vh;
 }
 
 footer {
@@ -143,8 +143,40 @@ footer {
     // justify-content: center;
 }
 
+#facebookLogo {
+    background-color: gray;
+    color: black;
+    font-size: 5vh;
+    padding: 1vh 2.22vh .4vh 1.97vh;
+    border-radius: 15%;
+    &:hover {
+        background-color: rgb(88, 88, 149);
+    };
+    margin-left: 13vw;
+    margin-top: 2vh;
+}
+
+#instagramLogo {
+    background-color: gray;
+    color: black;
+    font-size: 5vh;
+    padding: 1vh 1.43vh .45vh 1.35vh;
+    border-radius: 15%;
+    &:hover {
+        background-color: rgb(88, 88, 149);
+    };
+    margin-left: 1vw;
+}
+
 #copyrightText {
     color: white;
+    margin-left: 68vw;
+}
+
+#termsPrivacyDiv {
+    display: flex;
+    margin-top: 4vh;
+    margin-left: 13vw;
 }
 
 #slash {
