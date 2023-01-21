@@ -117,12 +117,22 @@ nav {
     justify-content: space-around;
 }
 
+.dropdownContent {
+    display: none;
+    margin-top: 1vh;
+}
+
 #productDropdown {
     @include buttonStyles();
     margin-left: 13vw;
     padding: 1.5vh;
     padding-left: 2vh;
     margin-right: 74vw;
+    &:hover {
+        .dropdownContent {
+            display: block;
+        }
+    }
 }
 
 .gray {
