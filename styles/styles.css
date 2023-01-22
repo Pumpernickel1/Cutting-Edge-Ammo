@@ -66,7 +66,7 @@ body {
   height: 20vh;
 }
 
-h1 {
+header h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: 500;
   font-size: 7vh;
@@ -75,7 +75,7 @@ h1 {
   padding-left: 13vw;
 }
 
-h2 {
+header h2 {
   font-weight: 550;
   font-size: 2.22vh;
   color: white;
@@ -105,9 +105,26 @@ nav {
   justify-content: space-around;
 }
 
+.gray {
+  background-color: rgb(242, 242, 242);
+  width: 100vw;
+  height: 9vh;
+  padding-top: 4vh;
+  position: relative;
+}
+
 .dropdownContent {
   display: none;
   margin-top: 1vh;
+  position: relative;
+}
+
+.poprightContent {
+  display: inline-block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 15vw;
 }
 
 #productDropdown {
@@ -117,6 +134,7 @@ nav {
   padding: 1.5vh;
   padding-left: 2vh;
   margin-right: 74vw;
+  position: absolute;
 }
 #productDropdown:hover {
   color: red;
@@ -124,16 +142,49 @@ nav {
 #productDropdown:hover .dropdownContent {
   display: block;
 }
-
-.gray {
-  background-color: rgb(242, 242, 242);
-  width: 100vw;
-  height: 9vh;
-  padding-top: 4vh;
+#productDropdown:hover .dropdownContent:hover .poprightContent {
+  display: inline-block;
 }
 
 .pageContent {
-  height: 10vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h1 {
+  font-size: 5vh;
+  margin-top: 3vh;
+}
+
+section h2 {
+  font-size: 2.4vh;
+  margin-top: 2vh;
+  font-weight: bold;
+}
+
+#aboutContent p {
+  font-size: 2.8vh;
+  max-width: 65vw;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+#termsContent p {
+  font-size: 2.4vh;
+  max-width: 65vw;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+#privacyContent p {
+  font-size: 2.4vh;
+  max-width: 65vw;
+  text-align: center;
+  margin-top: 2vh;
 }
 
 #facebookLogo {
