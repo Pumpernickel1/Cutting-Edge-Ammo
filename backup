@@ -1,3 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutting Edge Ammo</title>
+
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="black">
+            <h1>CUTTING EDGE AMMO</h1>
+            <h2>Ammunition for the Precision Minded Shooter</h2>
+            <div id="numOfItemsDiv">
+                <a href="basket.html" id="numOfItems">&#128722 0 ITEMS</a>
+            </div>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="basket.html">BASKET</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+        <div class="gray">
+            <div class="dropdownBox">VIEW PRODUCTS &#11206
+            <a href="toBeDetermined" class="dropdownContent">SINGLE BOX
+                <div class="poprightBox">
+                    <a href="toBeDetermined" class="poprightContent" id="popright1">.223 REMINGTON (SUB-MOA)</a>
+                    <a href="toBeDetermined" class="poprightContent" id="popright2">.38 SPECIAL (SUB-MOA)</a>
+                </div>
+            </a>
+            <a href="toBeDetermined" class="dropdownContent">BULK PURCHASE
+                <div class="poprightBox">
+                    <a href="toBeDetermined" class="poprightContent" id="popright3">.223 REMINGTON (SUB-MOA)</a>
+                    <a href="toBeDetermined" class="poprightContent" id="popright4">.38 SPECIAL (SUB-MOA)</a>
+                </div>
+            </a>
+            </div>
+        </div>
+    </header>
+    <section class="pageContent">
+        <img src="../images/slide1.jpg" alt="slide1" width="100%" height="100%" id="slide1">
+        <!-- <img src="../images/slide2.jpg" alt="slide2" width="100%" height="100%" id="slide2">
+        <img src="../images/slide3.jpg" alt="slide3" width="100%" height="100%" id="slide3">
+        <img src="../images/slide4.jpg" alt="slide4" width="100%" height="100%" id="slide4"> -->
+        <br><br>
+    </section>
+    <footer>
+        <div class="gray"><!--Gray space--></div>
+        <div class="black">
+            <a href="https://www.facebook.com/people/Cutting-Edge-Ammo/100066693577070/" id="facebookLogo" title="Cutting Edge Ammo on Facebook" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/cuttingedgeammu/?hl=en" id="instagramLogo" title="Cutting Edge Ammo on Instagram" class="fa fa-instagram"></a>
+            <p id="copyrightText">&#9400 Cutting Edge Ammo 'Current Year'</p>
+            <div id="termsPrivacyDiv">
+                <a href="terms.html">TERMS</a>
+                <p id="slash">&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+                <a href="privacy.html">PRIVACY</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var currentYear = new Date().getFullYear();
+        document.getElementById("copyrightText").innerHTML = "&#9400 Cutting Edge Ammo " + currentYear;
+    </script>
+    <script src="../index.js"></script>
+</body>
+</html>
+
+
+
+
+
 // Other Possible CSS Reset
 html, body {
     width: 100%;

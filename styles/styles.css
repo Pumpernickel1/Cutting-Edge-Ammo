@@ -119,31 +119,35 @@ nav {
   position: relative;
 }
 
-.poprightContent {
-  display: inline-block;
+.poprightBox {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  padding: 1.5vh;
+  padding-left: 2vh;
   left: 100%;
-  top: 0;
-  min-width: 15vw;
+  min-width: 25vw;
 }
 
-#productDropdown {
+.dropdownBox {
   background-color: black;
   color: white;
   margin-left: 13vw;
   padding: 1.5vh;
   padding-left: 2vh;
-  margin-right: 74vw;
+  padding-right: 2vh;
   position: absolute;
 }
-#productDropdown:hover {
+.dropdownBox:hover {
   color: red;
 }
-#productDropdown:hover .dropdownContent {
+.dropdownBox:hover .dropdownContent {
   display: block;
 }
-#productDropdown:hover .dropdownContent:hover .poprightContent {
-  display: inline-block;
+.dropdownBox:hover .dropdownContent:hover .poprightBox {
+  display: flex;
+  flex-direction: column;
 }
 
 .pageContent {
