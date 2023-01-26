@@ -113,23 +113,6 @@ nav {
   position: relative;
 }
 
-.dropdownContent {
-  display: none;
-  margin-top: 1vh;
-  position: relative;
-}
-
-.poprightBox {
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  padding: 1.5vh;
-  padding-left: 2vh;
-  left: 100%;
-  min-width: 25vw;
-}
-
 .dropdownBox {
   background-color: black;
   color: white;
@@ -146,8 +129,29 @@ nav {
   display: block;
 }
 .dropdownBox:hover .dropdownContent:hover .poprightBox {
-  display: flex;
-  flex-direction: column;
+  display: block;
+}
+
+.dropdownContent {
+  display: none;
+  margin-top: 1vh;
+  position: relative;
+}
+
+.poprightBox {
+  background-color: black;
+  display: none;
+  position: absolute;
+  padding: 1.5vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  left: 100%;
+  top: -65%;
+  min-width: 16vw;
+}
+
+#popright2, #popright4 {
+  margin-top: 1vh;
 }
 
 .pageContent {
