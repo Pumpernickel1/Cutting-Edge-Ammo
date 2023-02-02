@@ -5,7 +5,11 @@
 var numOfItems = 2;
 document.querySelector("#numOfItems").innerHTML = "&#128722 " + numOfItems + " ITEMS";
 
-
+var slides = document.querySelectorAll(".mySlides");
+var prev = document.querySelector(".prev");
+var next = document.querySelector(".next");
+prev.addEventListener('click', () => advanceSlides(-1));
+next.addEventListener('click', () => advanceSlides(1));
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -20,11 +24,6 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.querySelector(".mySlides");
-    var prev = document.querySelector(".prev");
-    var next = document.querySelector(".next");
-    prev.addEventListener (onclick, advanceSlides(-1));
-    next.addEventListener (onclick, advanceSlides(1));
     if (n > slides.length) {
         slideIndex = 1;
     };
@@ -32,9 +31,8 @@ function showSlides(n) {
         slideIndex = slides.length;
     };
     for (i = 0; i < slides.length; i++) {
-        (slides[i]).display = "none";
+        // console.log(slides[i]);
+        slides[i].style.display = "none";
     };
-    (slides[slideIndex - 1]).display = "block";
+    slides[slideIndex - 1].style.display = "block";
 };
-
-HTMLElement.addEventListener (eventType, callback)

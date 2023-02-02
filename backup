@@ -45,11 +45,22 @@
         </div>
     </header>
     <section class="pageContent">
-        <img src="../images/slide1.jpg" alt="slide1" width="100%" height="100%" id="slide1">
-        <!-- <img src="../images/slide2.jpg" alt="slide2" width="100%" height="100%" id="slide2">
-        <img src="../images/slide3.jpg" alt="slide3" width="100%" height="100%" id="slide3">
-        <img src="../images/slide4.jpg" alt="slide4" width="100%" height="100%" id="slide4"> -->
-        <br><br>
+        <div class="slideshowContainer">
+            <div class="mySlides">
+                <img src="../images/slide1.jpg" alt="slide1" width="100%" height="100%" id="slide1">
+            </div>  
+            <div class="mySlides">
+                <img src="../images/slide2.jpg" alt="slide2" width="100%" height="100%" id="slide2">
+            </div>
+            <div class="mySlides">    
+                <img src="../images/slide3.jpg" alt="slide3" width="100%" height="100%" id="slide3">
+            </div>
+            <div class="mySlides">   
+                <img src="../images/slide4.jpg" alt="slide4" width="100%" height="100%" id="slide4">
+            </div>
+            <a class="prev">&#10094</a>
+            <a class="next">&#10095</a>
+        </div>
     </section>
     <footer>
         <div class="gray"><!--Gray space--></div>
@@ -210,6 +221,7 @@ nav {
     padding-left: 2vh;
     padding-right: 2vh;
     position: absolute;
+    z-index: 1;
     &:hover {
         .dropdownContent {
             display: block;
@@ -242,6 +254,38 @@ nav {
 
 #popright2, #popright4 {
     margin-top: 1vh;
+}
+
+.slideshowContainer {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 8vh;
+    padding: .8vh 1.8vh 1.4vh 1.8vh;
+    font-weight: bold;
+    border-radius: 0 20% 20% 0;
+    background-color: rgb(0, 0, 0, 0);
+    &:hover {
+        background-color: rgb(0, 0, 0, 1);
+        color: white;
+    }
+}
+
+.next {
+    right: 0;
+    border-radius: 20% 0 0 20%;
+}
+
+.prev {
+    padding-left: 1.4vh;
+    padding-right: 2vh;
 }
 
 .pageContent {

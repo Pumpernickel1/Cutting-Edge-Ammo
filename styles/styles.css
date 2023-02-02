@@ -121,6 +121,7 @@ nav {
   padding-left: 2vh;
   padding-right: 2vh;
   position: absolute;
+  z-index: 1;
 }
 .dropdownBox:hover {
   color: red;
@@ -163,11 +164,10 @@ nav {
 }
 
 .prev, .next {
-  color: gray;
   position: absolute;
   top: 50%;
-  font-size: 7vh;
-  padding: 0.8vh 1.8vh 1.2vh 1.8vh;
+  font-size: 8vh;
+  padding: 0.8vh 1.8vh 1.4vh 1.8vh;
   font-weight: bold;
   border-radius: 0 20% 20% 0;
   background-color: rgba(0, 0, 0, 0);
@@ -180,6 +180,11 @@ nav {
 .next {
   right: 0;
   border-radius: 20% 0 0 20%;
+}
+
+.prev {
+  padding-left: 1.4vh;
+  padding-right: 2vh;
 }
 
 .pageContent {
