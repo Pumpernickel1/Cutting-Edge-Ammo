@@ -44,13 +44,13 @@ document.querySelector("#numOfItems").innerHTML = "&#128722 " + numOfItems + " I
 var slides = document.querySelectorAll(".mySlides");
 var prev = document.querySelector(".prev");
 var next = document.querySelector(".next");
+prev.addEventListener('click', () => slideIndex += 1);
+next.addEventListener('click', () => slideIndex += 1);
 
 var slideIndex = 0;
 console.log(slides);
 
 function slideShow() {
-    prev.addEventListener('click', () => slideIndex -= 1);
-    next.addEventListener('click', () => slideIndex += 1);
     if (slideIndex < 0) {slideIndex = slides.length - 1};
     if (slideIndex > slides.length - 1) {slideIndex = 0};
     if (slideIndex === 0) {

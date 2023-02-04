@@ -65,6 +65,37 @@
         <h1>Welcome to Cutting Edge Ammo</h1>
         <p>We are your .38 Special and .223/5.56 specialists.  All of our ammunition utilizes new premium unfired brass.  Tighter manufacturing tolerances equal superior cartridges; all ammo is &lt;1 MOA.  Compare us with match ammunition that retails for over $1 a round.  Select one of our bulk options (800+ rounds) to save big.</p>
         <p>FREE SHIPPING ON ALL PRODUCTS!  All major credit/debit cards accepted.  If you're interested in paying with cash, check, or money order, please reach out to us at cuttingedgeammo@gmail.com.  Please note that when utilizing any payment method other than credit/debit card, your order will not ship until your funds have been deposited into our account.</p>
+        <br>
+        <div class="featuredProductsDiv">
+            <p id="featuredProductsText">Featured Products</p>
+            <div class="grayLine"></div>
+            <div class="featuredProductsContainer">
+                <article class="productArticle" id="38UHP1000">
+                    <img src="../images/38UHP1000.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="38UHP100">
+                    <img src="../images/38UHP100.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="223FMJ800">
+                    <img src="../images/223FMJ800.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="223FMJ100">
+                    <img src="../images/223FMJ100.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="223HPBT100">
+                    <img src="../images/223HPBT100.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="223HPBT800">
+                    <img src="../images/223HPBT800.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="38JSP1000">
+                    <img src="../images/38JSP1000.jpg" alt="Product Image" width="30%">
+                </article>
+                <article class="productArticle" id="38JSP100">
+                    <img src="../images/38JSP100.jpg" alt="Product Image" width="30%">
+                </article>
+            </div>
+        </div>
         <br><br>
     </section>
     <footer>
@@ -87,6 +118,103 @@
     <script src="../index.js"></script>
 </body>
 </html>
+
+
+
+
+
+// var currentYear = new Date().getFullYear();
+// document.getElementById("copyrightText").innerHTML = "&#9400 Cutting Edge Ammo " + currentYear;
+// // Put in a script tag in index.html itself.
+
+var numOfItems = 2;
+document.querySelector("#numOfItems").innerHTML = "&#128722 " + numOfItems + " ITEMS";
+
+// var slides = document.querySelectorAll(".mySlides");
+// var prev = document.querySelector(".prev");
+// var next = document.querySelector(".next");
+// prev.addEventListener('click', () => advanceSlides(-1));
+// next.addEventListener('click', () => advanceSlides(1));
+
+// var slideIndex = 1;
+// showSlides(slideIndex);
+
+// function advanceSlides(n) {
+//     showSlides(slideIndex += n);
+// };
+
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// };
+
+// function showSlides(n) {
+//     var i;
+//     if (n > slides.length) {
+//         slideIndex = 1;
+//     };
+//     if (n < 1) {
+//         slideIndex = slides.length;
+//     };
+//     for (i = 0; i < slides.length; i++) {
+//         // console.log(slides[i]);
+//         slides[i].style.display = "none";
+//     };
+//     slides[slideIndex - 1].style.display = "block";
+// };
+
+
+
+
+
+var slides = document.querySelectorAll(".mySlides");
+var prev = document.querySelector(".prev");
+var next = document.querySelector(".next");
+prev.addEventListener('click', () => slideIndex += 1);
+next.addEventListener('click', () => slideIndex += 1);
+
+var slideIndex = 0;
+console.log(slides);
+
+function slideShow() {
+    if (slideIndex < 0) {slideIndex = slides.length - 1};
+    if (slideIndex > slides.length - 1) {slideIndex = 0};
+    if (slideIndex === 0) {
+        slides[0].style.display = "block";
+        slides[1].style.display = "none";
+        slides[2].style.display = "none";
+        slides[3].style.display = "none";
+        setTimeout(slideShow, 2000);
+        slideIndex++
+        // sleep(2000).then(() => {slideShow()});
+        // setTimeout(() => { slideIndex += 1; }, 5000);
+    }
+    else if (slideIndex === 1) {
+        slides[0].style.display = "none";
+        slides[1].style.display = "block";
+        slides[2].style.display = "none";
+        slides[3].style.display = "none";
+        setTimeout(slideShow, 2000);
+        slideIndex++
+    }
+    else if (slideIndex === 2) {
+        slides[0].style.display = "none";
+        slides[1].style.display = "none";
+        slides[2].style.display = "block";
+        slides[3].style.display = "none";
+        setTimeout(slideShow, 2000);
+        slideIndex++
+    }
+    else if (slideIndex === 3) {
+        slides[0].style.display = "none";
+        slides[1].style.display = "none";
+        slides[2].style.display = "none";
+        slides[3].style.display = "block";
+        setTimeout(slideShow, 2000);
+        slideIndex++
+    };
+};
+
+slideShow()
 
 
 
@@ -269,7 +397,7 @@ nav {
 }
 
 .mySlides {
-    display: none;
+    display: block;
 }
 
 .prev, .next {
@@ -321,6 +449,32 @@ section h2 {
     text-align: center;
     margin-top: 2vh;
 }
+
+#homeContent #featuredProductsText {
+    font-size: 3.6vh;
+    font-weight: 100;
+}
+
+.grayLine {
+    background-color: rgb(242, 242, 242);
+    width: 65vw;
+    height: .3vh;
+    margin-top: 2vh;
+}
+
+// .featuredProductsContainer {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     max-width: 65vw;
+//     height: fit-content;
+// }
+
+// .featuredProductsContainer article {
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     margin-left: 5vw 5vw;
+// }
 
 #aboutContent p {
     font-size: 2.8vh;
@@ -389,100 +543,3 @@ footer {
 #slash {
     color: white;
 }
-
-
-
-
-
-// var currentYear = new Date().getFullYear();
-// document.getElementById("copyrightText").innerHTML = "&#9400 Cutting Edge Ammo " + currentYear;
-// // Put in a script tag in index.html itself.
-
-var numOfItems = 2;
-document.querySelector("#numOfItems").innerHTML = "&#128722 " + numOfItems + " ITEMS";
-
-// var slides = document.querySelectorAll(".mySlides");
-// var prev = document.querySelector(".prev");
-// var next = document.querySelector(".next");
-// prev.addEventListener('click', () => advanceSlides(-1));
-// next.addEventListener('click', () => advanceSlides(1));
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// function advanceSlides(n) {
-//     showSlides(slideIndex += n);
-// };
-
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// };
-
-// function showSlides(n) {
-//     var i;
-//     if (n > slides.length) {
-//         slideIndex = 1;
-//     };
-//     if (n < 1) {
-//         slideIndex = slides.length;
-//     };
-//     for (i = 0; i < slides.length; i++) {
-//         // console.log(slides[i]);
-//         slides[i].style.display = "none";
-//     };
-//     slides[slideIndex - 1].style.display = "block";
-// };
-
-
-
-
-
-var slides = document.querySelectorAll(".mySlides");
-var prev = document.querySelector(".prev");
-var next = document.querySelector(".next");
-
-var slideIndex = 0;
-console.log(slides);
-
-function slideShow() {
-    prev.addEventListener('click', () => slideIndex -= 1);
-    next.addEventListener('click', () => slideIndex += 1);
-    if (slideIndex < 0) {slideIndex = slides.length - 1};
-    if (slideIndex > slides.length - 1) {slideIndex = 0};
-    if (slideIndex === 0) {
-        slides[0].style.display = "block";
-        slides[1].style.display = "none";
-        slides[2].style.display = "none";
-        slides[3].style.display = "none";
-        setTimeout(slideShow, 2000);
-        slideIndex++
-        // sleep(2000).then(() => {slideShow()});
-        // setTimeout(() => { slideIndex += 1; }, 5000);
-    }
-    else if (slideIndex === 1) {
-        slides[0].style.display = "none";
-        slides[1].style.display = "block";
-        slides[2].style.display = "none";
-        slides[3].style.display = "none";
-        setTimeout(slideShow, 2000);
-        slideIndex++
-    }
-    else if (slideIndex === 2) {
-        slides[0].style.display = "none";
-        slides[1].style.display = "none";
-        slides[2].style.display = "block";
-        slides[3].style.display = "none";
-        setTimeout(slideShow, 2000);
-        slideIndex++
-    }
-    else if (slideIndex === 3) {
-        slides[0].style.display = "none";
-        slides[1].style.display = "none";
-        slides[2].style.display = "none";
-        slides[3].style.display = "block";
-        setTimeout(slideShow, 2000);
-        slideIndex++
-    };
-};
-
-slideShow()

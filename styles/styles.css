@@ -164,7 +164,7 @@ nav {
 }
 
 .mySlides {
-  display: none;
+  display: block;
 }
 
 .prev, .next {
@@ -216,6 +216,18 @@ section h2 {
   font-size: 2.4vh;
   max-width: 65vw;
   text-align: center;
+  margin-top: 2vh;
+}
+
+#homeContent #featuredProductsText {
+  font-size: 3.6vh;
+  font-weight: 100;
+}
+
+.grayLine {
+  background-color: rgb(242, 242, 242);
+  width: 65vw;
+  height: 0.3vh;
   margin-top: 2vh;
 }
 
