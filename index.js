@@ -44,7 +44,7 @@ document.querySelector("#numOfItems").innerHTML = "&#128722 " + numOfItems + " I
 var slides = document.querySelectorAll(".mySlides");
 var prev = document.querySelector(".prev");
 var next = document.querySelector(".next");
-prev.addEventListener('click', () => slideIndex += 1);
+prev.addEventListener('click', () => slideIndex -= 1);
 next.addEventListener('click', () => slideIndex += 1);
 
 var slideIndex = 0;
