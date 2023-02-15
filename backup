@@ -71,28 +71,44 @@
             <div class="grayLine"></div>
             <div class="featuredProductsContainer">
                 <article class="productArticle" id="38UHP1000">
-                    <img src="../images/38UHP1000.jpg" alt="Product Image" width="30%">
+                    <img src="../images/38UHP1000.jpg" alt="Product Image">
+                    <p>Sub-MOA .38SP - 158GR UHP 1000CT</p>
+                    <p>$575.10</p>
                 </article>
                 <article class="productArticle" id="38UHP100">
-                    <img src="../images/38UHP100.jpg" alt="Product Image" width="30%">
+                    <img src="../images/38UHP100.jpg" alt="Product Image">
+                    <p>Sub-MOA .38SP - 158GR UHP 100CT</p>
+                    <p>$73.38</p>
                 </article>
                 <article class="productArticle" id="223FMJ800">
-                    <img src="../images/223FMJ800.jpg" alt="Product Image" width="30%">
+                    <img src="../images/223FMJ800.jpg" alt="Product Image">
+                    <p>Sub-MOA .223REM - 62GR FMJ-BT 800CT</p>
+                    <p>$523.83</p>
                 </article>
                 <article class="productArticle" id="223FMJ100">
-                    <img src="../images/223FMJ100.jpg" alt="Product Image" width="30%">
+                    <img src="../images/223FMJ100.jpg" alt="Product Image">
+                    <p>Sub-MOA .223REM - 62GR FMJ-BT 100CT</p>
+                    <p>$81.62</p>
                 </article>
                 <article class="productArticle" id="223HPBT100">
-                    <img src="../images/223HPBT100.jpg" alt="Product Image" width="30%">
+                    <img src="../images/223HPBT100.jpg" alt="Product Image">
+                    <p>Sub-MOA .223REM - 75GR HPBT 100CT</p>
+                    <p>$87.80</p>
                 </article>
                 <article class="productArticle" id="223HPBT800">
-                    <img src="../images/223HPBT800.jpg" alt="Product Image" width="30%">
+                    <img src="../images/223HPBT800.jpg" alt="Product Image">
+                    <p>Sub-MOA .223REM - 75GR HPBT 800CT</p>
+                    <p>$573.27</p>
                 </article>
                 <article class="productArticle" id="38JSP1000">
-                    <img src="../images/38JSP1000.jpg" alt="Product Image" width="30%">
+                    <img src="../images/38JSP1000.jpg" alt="Product Image">
+                    <p>Sub-MOA .38SP - 158GR JSP 1000CT</p>
+                    <p>$575.10</p>
                 </article>
                 <article class="productArticle" id="38JSP100">
-                    <img src="../images/38JSP100.jpg" alt="Product Image" width="30%">
+                    <img src="../images/38JSP100.jpg" alt="Product Image">
+                    <p>Sub-MOA .38SP - 158GR JSP 100CT</p>
+                    <p>$73.38</p>
                 </article>
             </div>
         </div>
@@ -169,7 +185,7 @@ document.querySelector("#numOfItems").innerHTML = "&#128722 " + numOfItems + " I
 var slides = document.querySelectorAll(".mySlides");
 var prev = document.querySelector(".prev");
 var next = document.querySelector(".next");
-prev.addEventListener('click', () => slideIndex += 1);
+prev.addEventListener('click', () => slideIndex -= 1);
 next.addEventListener('click', () => slideIndex += 1);
 
 var slideIndex = 0;
@@ -462,19 +478,24 @@ section h2 {
     margin-top: 2vh;
 }
 
-// .featuredProductsContainer {
-//     display: flex;
-//     flex-wrap: wrap;
-//     flex-direction: row;
-//     max-width: 65vw;
-//     height: fit-content;
-// }
+.featuredProductsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 65vw;
+    // height: fit-content;
+}
 
-// .featuredProductsContainer article {
-//     flex-wrap: wrap;
-//     flex-direction: row;
-//     margin-left: 5vw 5vw;
-// }
+.featuredProductsContainer article {
+    display: flex;
+    flex-direction: column;
+    max-width: 12vw;
+    margin: 4.4vh;
+}
+
+.featuredProductsContainer article p {
+    // font-size: 7vh;
+}
 
 #aboutContent p {
     font-size: 2.8vh;

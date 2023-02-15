@@ -59,7 +59,6 @@ table {
 body {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -193,7 +192,6 @@ nav {
 }
 
 .pageContent {
-  min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   display: flex;
@@ -229,6 +227,20 @@ section h2 {
   width: 65vw;
   height: 0.3vh;
   margin-top: 2vh;
+}
+
+.featuredProductsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 65vw;
+}
+
+.featuredProductsContainer article {
+  display: flex;
+  flex-direction: column;
+  max-width: 12vw;
+  margin: 4.4vh;
 }
 
 #aboutContent p {
